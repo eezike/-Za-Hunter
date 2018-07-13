@@ -7,11 +7,18 @@
 //
 
 import UIKit
-
+import MapKit
 class LocationDetailsViewController: UIViewController {
-
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
+    var selectedMapItem = MKMapItem()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(selectedMapItem.name!)
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +28,16 @@ class LocationDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        nameLabel.text = selectedMapItem.placemark.name
+        var address = selectedMapItem.placemark.subThoroughfare! + " "
+        address += selectedMapItem.placemark.thoroughfare! + "\n"
+        address += selectedMapItem.placemark.locality! + ", "
+        address += selectedMapItem.placemark.administrativeArea! + " "
+        address += selectedMapItem.placemark.postalCode!
+        addressLabel.text = address
+        phoneLabel.text = selectedMapItem.phoneNumber
+    }
     
     
 }
