@@ -12,6 +12,7 @@
 		14BE0EBA20F6AA7A005EEEBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BE0EB820F6AA7A005EEEBA /* Main.storyboard */; };
 		14BE0EBC20F6AA7B005EEEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BE0EBB20F6AA7B005EEEBA /* Assets.xcassets */; };
 		14BE0EBF20F6AA7B005EEEBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BE0EBD20F6AA7B005EEEBA /* LaunchScreen.storyboard */; };
+		14BE0EC720F837E4005EEEBA /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BE0EC620F837E4005EEEBA /* LocationDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		14BE0EBB20F6AA7B005EEEBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14BE0EBE20F6AA7B005EEEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14BE0EC020F6AA7B005EEEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14BE0EC620F837E4005EEEBA /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				14BE0EB420F6AA7A005EEEBA /* AppDelegate.swift */,
 				14BE0EB620F6AA7A005EEEBA /* ViewController.swift */,
 				14BE0EB820F6AA7A005EEEBA /* Main.storyboard */,
+				14BE0EC620F837E4005EEEBA /* LocationDetailsViewController.swift */,
 				14BE0EBB20F6AA7B005EEEBA /* Assets.xcassets */,
 				14BE0EBD20F6AA7B005EEEBA /* LaunchScreen.storyboard */,
 				14BE0EC020F6AA7B005EEEBA /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14BE0EC720F837E4005EEEBA /* LocationDetailsViewController.swift in Sources */,
 				14BE0EB720F6AA7A005EEEBA /* ViewController.swift in Sources */,
 				14BE0EB520F6AA7A005EEEBA /* AppDelegate.swift in Sources */,
 			);
