@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SafariServices
 class LocationDetailsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -39,5 +40,14 @@ class LocationDetailsViewController: UIViewController {
         phoneLabel.text = selectedMapItem.phoneNumber
     }
     
+    @IBAction func onDirectionsButtonTapped(_ sender: Any) {
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+        MKMapItem.openMaps(with: [selectedMapItem], launchOptions: launchOptions)
+    }
     
+    @IBAction func onWebsiteButtonTapped(_ sender: Any) {
+        if let url = selectedMapItem.url {
+            present(SFSafariViewController(url: url), animated: true)
+        }
+    }
 }

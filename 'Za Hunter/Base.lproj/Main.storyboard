@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--'Za Hunter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_Za_Hunter" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="I6H-IH-CKt"/>
+                    <navigationItem key="navigationItem" title="'Za Hunter" id="I6H-IH-CKt"/>
                     <connections>
                         <outlet property="mapView" destination="utM-Gs-toO" id="n2i-ZD-Ddt"/>
                         <segue destination="0if-GL-bss" kind="show" identifier="ShowLocationDetailsSegue" id="ioJ-Cg-gFB"/>
@@ -51,6 +51,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-0W-F5I">
+                                <rect key="frame" x="-533" y="-72" width="1440" height="810"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF1-7H-SAO">
                                 <rect key="frame" x="87" y="251" width="200" height="150"/>
                                 <constraints>
@@ -77,18 +80,50 @@
                                     <constraint firstAttribute="height" constant="50" id="Bjk-Zk-dsu"/>
                                     <constraint firstAttribute="width" constant="200" id="o13-68-f3r"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9y-2r-wcF">
+                                <rect key="frame" x="85" y="579" width="56" height="30"/>
+                                <color key="backgroundColor" red="0.97627599287649514" green="1" blue="0.67473632156710761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Website"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onWebsiteButtonTapped:" destination="0if-GL-bss" eventType="touchUpInside" id="x8s-TS-gZv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-n6-hFJ">
+                                <rect key="frame" x="219" y="579" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.69072858771418411" green="1" blue="0.66768016257443252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Directions"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onDirectionsButtonTapped:" destination="0if-GL-bss" eventType="touchUpInside" id="xqh-fP-1bp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="v9y-2r-wcF" firstAttribute="leading" secondItem="MFn-7x-ssH" secondAttribute="leading" constant="85" id="7nG-B7-WH7"/>
                             <constraint firstItem="6Qm-Ob-w13" firstAttribute="centerX" secondItem="eIc-Vt-kmH" secondAttribute="centerX" id="8aU-aC-pqo"/>
                             <constraint firstItem="qF1-7H-SAO" firstAttribute="centerX" secondItem="eIc-Vt-kmH" secondAttribute="centerX" id="Bjq-nz-xX5"/>
+                            <constraint firstItem="v9y-2r-wcF" firstAttribute="top" secondItem="6Qm-Ob-w13" secondAttribute="bottom" constant="73" id="Ef8-Tj-xSw"/>
+                            <constraint firstItem="9aq-n6-hFJ" firstAttribute="leading" secondItem="v9y-2r-wcF" secondAttribute="trailing" constant="78" id="SmP-j1-0vd"/>
+                            <constraint firstItem="eGD-0W-F5I" firstAttribute="centerY" secondItem="eIc-Vt-kmH" secondAttribute="centerY" id="kjL-it-yCh"/>
                             <constraint firstItem="6Qm-Ob-w13" firstAttribute="top" secondItem="qF1-7H-SAO" secondAttribute="bottom" constant="55" id="odR-Ji-Uhm"/>
+                            <constraint firstItem="eGD-0W-F5I" firstAttribute="centerX" secondItem="eIc-Vt-kmH" secondAttribute="centerX" id="qTV-Bu-cLP"/>
                             <constraint firstItem="snF-03-mys" firstAttribute="top" secondItem="MFn-7x-ssH" secondAttribute="top" constant="95" id="rqz-Eg-Tbd"/>
                             <constraint firstItem="snF-03-mys" firstAttribute="centerX" secondItem="eIc-Vt-kmH" secondAttribute="centerX" id="tnh-52-n4t"/>
+                            <constraint firstItem="v9y-2r-wcF" firstAttribute="baseline" secondItem="9aq-n6-hFJ" secondAttribute="baseline" id="wDu-EL-5cP"/>
                             <constraint firstItem="qF1-7H-SAO" firstAttribute="top" secondItem="snF-03-mys" secondAttribute="bottom" constant="42" id="yYo-Tw-77V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MFn-7x-ssH"/>
@@ -101,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dg7-Ey-XyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="123"/>
+            <point key="canvasLocation" x="1933.5999999999999" y="122.78860569715144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D5T-I3-m8q">
@@ -122,4 +157,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pizza" width="1440" height="810"/>
+    </resources>
 </document>
